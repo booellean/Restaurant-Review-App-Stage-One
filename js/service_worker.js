@@ -7,7 +7,10 @@ window.addEventListener('load', swRegister);
 function swRegister(){
   if(!navigator.serviceWorker){return};
 
-  navigator.serviceWorker.register('/sw.js').then(function(reg){
+  navigator.serviceWorker.register('/sw.js')
+  .then(function(reg){
     console.log(`I did something`);
-  });
+    scope: '/';
+  })
+  .catch(err => {throw err});
 }
