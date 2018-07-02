@@ -1,5 +1,5 @@
 const staticCacheName= 'restaurant-review-';
-const staticCacheVer = 'v1';
+const staticCacheVer = 'v2';
 const staticCache = staticCacheName + staticCacheVer; //full version name
 
 /**
@@ -10,7 +10,7 @@ const staticCache = staticCacheName + staticCacheVer; //full version name
 */
 self.addEventListener('install', function (event){
   event.waitUntil(
-    caches.open(staticCache).then(function(cache) {
+    caches.open(staticCache).then(function(cache){
       return cache.addAll([
         'restaurant.html',
         'index.html',
@@ -41,13 +41,13 @@ self.addEventListener('install', function (event){
 * @param {string} staticCache
 * @returns {string} During service worker activation, deletes all cache that is no longer found in new service worker version
 */
-self.addEventListener('activate', function(event) {
+self.addEventListener('activate', function(event){
   event.waitUntil(
-    caches.keys().then(function(cacheNames) {
+    caches.keys().then(function(cacheNames){
       return Promise.all(
-        cacheNames.filter(function(cacheName) {
+        cacheNames.filter(function(cacheName){
           return cacheName.startsWith(staticCacheName) && cacheName != staticCache;
-        }).map(function(cacheName) {
+        }).map(function(cacheName){
           return caches.delete(cacheName);
         })
       );
@@ -61,9 +61,9 @@ self.addEventListener('activate', function(event) {
 * @param {string} res
 * @returns {string} cache if it is found locally or the event.request from the server if it is not found
 */
-self.addEventListener('fetch', function(event) {
+self.addEventListener('fetch', function(event){
   event.respondWith(
-    caches.match(event.request).then(function(res) {
+    caches.match(event.request).then(function(res){
       if(res) return res;
       return fetch(event.request);
     })
