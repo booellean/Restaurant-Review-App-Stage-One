@@ -15,8 +15,17 @@ class FocusGroup{
     this.focusMax = this.nodes.length - 1;
     this.focusNode = this.nodes[this.focusIndex];
 
+    //sets the tabIndex of all Array-like objects passed
+    for(let node of this.nodes){
+      if(node !== this.focusNode){
+        node.tabIndex = -1;
+      }else{
+        node.tabIndex = 0;
+      }
+    }
+
     this.el.addEventListener('keydown', event => this.pushKey(event));
-    this.el.addEventListner('click', event => this.changeFocus(event));
+    this.el.addEventListener('click', event => this.changeFocus(event));
   }
 
   pushKey(event){
@@ -32,11 +41,12 @@ class FocusGroup{
 
   }
 
+  changeTabFocus(index){
+
+  }
+
 }
 
-//variables are kept in global scope
-//objects will not be DOM accessible if variables
-//are only defined in the following function
 let group1;
 let mapGroup;
 
