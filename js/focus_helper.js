@@ -16,27 +16,30 @@ class FocusGroup{
     this.focusNode = this.nodes[this.focusIndex];
 
     //sets the tabIndex of all Array-like objects passed
-    for(let node of this.nodes){
-      if(node !== this.focusNode){
-        node.tabIndex = -1;
+    //adds event listener to all nodes to pass index through click event
+    for(let i=0; i<=this.focusMax; i++){
+      if(this.nodes[i] !== this.focusNode){
+        this.nodes[i].tabIndex = -1;
       }else{
-        node.tabIndex = 0;
+        this.nodes[i].tabIndex = 0;
       }
+      this.nodes[i].addEventListener('click', (event, index) => this.pushKey(event, i));
     }
 
     this.el.addEventListener('keydown', event => this.pushKey(event));
-    this.el.addEventListener('click', event => this.changeFocus(event));
   }
 
-  pushKey(event){
+  pushKey(event, index){
     if(event.keyCode === keyDown || event.keyCode === keyRight){
       this.focusIndex === this.focusMax ? this.focusIndex = 0 : this.focusIndex++;
-      console.log(this.focusIndex);
     }
 
     if(event.keyCode === keyUp || event.keyCode === keyLeft){
       this.focusIndex === 0 ? this.focusIndex = this.focusMax : this.focusIndex--;
-      console.log(this.focusIndex);
+    }
+
+    if(event.type === 'click'){
+      this.focusIndex = index;
     }
 
     this.changeTabFocus(this.focusIndex);
