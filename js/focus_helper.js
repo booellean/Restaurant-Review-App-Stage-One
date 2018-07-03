@@ -39,15 +39,20 @@ class FocusGroup{
       console.log(this.focusIndex);
     }
 
+    this.changeTabFocus(this.focusIndex);
+
   }
 
   changeTabFocus(index){
+    this.focusNode.tabIndex = -1;
 
+    this.focusNode = this.nodes[index];
+    this.focusNode.tabIndex = 0;
+    this.focusNode.focus();
   }
 
 }
 
-let group1;
 let mapGroup;
 
 function indexObjects(){
