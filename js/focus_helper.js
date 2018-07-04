@@ -57,8 +57,18 @@ class FocusGroup{
 }
 
 let mapGroup;
+let linkGroup;
+let listObj = {};
 
 function indexObjects(){
   markerGroup = new FocusGroup('.leaflet-marker-pane','.leaflet-marker-icon');
   linkGroup = new FocusGroup('.leaflet-control-attribution', 'a');
+
+  let restaurantArr = Array.from(document.querySelectorAll('#restaurants-list li'));
+  let arrFunction = restaurantArr.map( listItem => {
+    let itemID = listItem.id;
+    listObj[itemID] = new FocusGroup(`li#${itemID}`, '.focus-item');
+    // listObj[itemID] = `this is a test item ${itemID}`;
+  });
+
 }
