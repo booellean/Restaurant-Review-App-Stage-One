@@ -30,23 +30,25 @@
   <main id="maincontent">
     <!-- Beginning map -->
     <section id="map-container">
-      <div id="map"></div>
+      <div id="map" aria-label="Mapbox map of selected restaurant with marker icon. Please tab over and use arrow keys to tab through copyright information."></div>
     </section>
     <!-- End map -->
-    <!-- Beginning restaurant -->
-    <section id="restaurant-container">
-      <h1 id="restaurant-name"></h1>
-      <img id="restaurant-img">
-      <p id="restaurant-cuisine"></p>
-      <p id="restaurant-address"></p>
-      <table id="restaurant-hours"></table>
+    <section id="restaurant-content">
+      <!-- Beginning restaurant -->
+      <section id="restaurant-container" tabindex="0" aria-label="Restaurant Infromation. Please tab over and use arrow keys to cycle through content">
+        <h1 id="restaurant-name"></h1>
+        <img id="restaurant-img">
+        <p id="restaurant-cuisine"></p>
+        <p id="restaurant-address"></p>
+        <table id="restaurant-hours"></table>
+      </section>
+      <!-- end restaurant -->
+      <!-- Beginning reviews -->
+      <section id="reviews-container" tabindex="0" aria-label="Review Information. Please tab over and use arrow keys to cycle through content">
+        <ul id="reviews-list"></ul>
+      </section>
+      <!-- End reviews -->
     </section>
-    <!-- end restaurant -->
-    <!-- Beginning reviews -->
-    <section id="reviews-container">
-      <ul id="reviews-list"></ul>
-    </section>
-    <!-- End reviews -->
   </main>
   <!-- End main -->
 
