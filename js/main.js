@@ -146,27 +146,32 @@ fillRestaurantsHTML = (restaurants = self.restaurants) => {
  */
 createRestaurantHTML = (restaurant) => {
   const li = document.createElement('li');
-  li.setAttribute('id', restaurant.name); //used to create nodes for focus_helper
+  const newId = (restaurant.name).replace(/[^A-Za-z0-9]/g, '');
+  li.setAttribute('id', newId); //used to create nodes for focus_helper
 
   const image = document.createElement('img');
-  image.className = 'restaurant-img';
+  image.className = 'focus-item restaurant-img';
   image.src = DBHelper.imageUrlForRestaurant(restaurant);
   li.append(image);
 
   const name = document.createElement('h1');
   name.innerHTML = restaurant.name;
+  name.className = 'focus-item';
   li.append(name);
 
   const neighborhood = document.createElement('p');
   neighborhood.innerHTML = restaurant.neighborhood;
+  neighborhood.className = 'focus-item';
   li.append(neighborhood);
 
   const address = document.createElement('p');
   address.innerHTML = restaurant.address;
+  address.className = 'focus-item';
   li.append(address);
 
   const more = document.createElement('a');
   more.innerHTML = 'View Details';
+  more.className = 'focus-item';
   more.href = DBHelper.urlForRestaurant(restaurant);
   li.append(more)
 
