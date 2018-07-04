@@ -72,3 +72,13 @@ function indexObjects(){
   });
 
 }
+
+let reviewsGroup;
+let restaurantGroup;
+let restaurantLinkGroup;
+
+function restaurantObjects(){
+  reviewsGroup = new FocusGroup('#reviews-container', '.focus-item');
+  restaurantGroup = new FocusGroup('#restaurant-container', '.focus-item');
+  restaurantLinkGroup = new FocusGroup('.leaflet-control-attribution', 'a');
+}
