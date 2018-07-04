@@ -1,5 +1,5 @@
 const staticCacheName= 'restaurant-review-';
-const staticCacheVer = 'v2';
+const staticCacheVer = 'v1';
 const staticCache = staticCacheName + staticCacheVer; //full version name
 
 /**
