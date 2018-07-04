@@ -132,30 +132,37 @@ nav h1 a {
   box-sizing: border-box;
   margin: 0;
   width: 100%;
-  height: 50px;
   background-color: #3397DB;
   align-items: center;
 }
 .filter-options h2 {
   color: white;
-  width: 6rem;
+  width: 30%;
+  min-width: 6rem;
   flex-shrink: 0;
   font-size: 1rem;
   font-weight: normal;
   line-height: 1;
   margin: 0 10px;
 }
-.filter-options select {
+.select-container{
+  display: flex;
+  flex-flow: column nowrap;
+  width: 70%;
+  padding: 0 10px;
+}
+.select-container select {
   background-color: white;
   border: 1px solid #fff;
   font-family: Arial,sans-serif;
   font-size: 11pt;
   flex-shrink: 1;
+  box-sizing: border-box;
   height: 35px;
   letter-spacing: 0;
-  margin: 10px;
+  margin: 10px 0;
   padding: 0 10px;
-  width: 30%;
+  width: 100%;
 }
 
 /* ====================== Restaurant Section ====================== */
