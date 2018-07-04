@@ -59,5 +59,7 @@ class FocusGroup{
 let mapGroup;
 
 function indexObjects(){
-  mapGroup = new FocusGroup('#map','.leaflet-marker-icon');
+  // mapGroup = new FocusGroup('#map','.leaflet-marker-icon');
+  markerGroup = new FocusGroup('.leaflet-marker-pane','.leaflet-marker-icon');
+  linkGroup = new FocusGroup('.leaflet-control-attribution', 'a');
 }
