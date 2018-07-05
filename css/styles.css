@@ -403,6 +403,13 @@ img{
     width: 100%;
   }
 }
+@media screen and (max-width: 541px){
+  #footer{
+    padding: 25px 10px;
+    text-align: left;
+    overflow-wrap: break-all;
+  }
+}
 @media screen and (max-width: 498px){
   .select-container{
     flex-flow: column nowrap;
