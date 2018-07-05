@@ -259,9 +259,10 @@ header {
   margin: 15px 0 30px;
   text-transform: uppercase;
   line-height: 1.1;
+  text-align: center;
 }
 #restaurant-img {
-	width: 90%;
+	width: 100%;
 }
 #restaurant-address {
   font-size: 12pt;
@@ -277,7 +278,7 @@ header {
   padding: 2px 0;
   text-align: center;
   text-transform: uppercase;
-	width: 90%;
+	width: 100%;
 }
 #restaurant-container, #reviews-container {
   border-bottom: 1px solid #d9d9d9;
