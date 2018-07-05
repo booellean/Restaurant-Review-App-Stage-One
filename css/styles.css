@@ -397,4 +397,8 @@ img{
   #reviews-list>li{
     width: 100%;
   }
+  /*index.html page*/
+  #restaurants-list li{
+    width: 100%;
+  }
 }
