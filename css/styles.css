@@ -125,6 +125,9 @@ nav h1 a {
   width: 50%;
   height: 100%;
 }
+.leaflet-control-zoom{
+  margin-top: 65px !important;
+}
 /* ====================== Restaurant Filtering ====================== */
 .filter-options {
   display: flex;
@@ -331,10 +334,9 @@ img{
     width: 100%;
   }
   #map-container{
-    height: 20rem;
+    height: 23.125rem;
   }
   #map{
-    margin-top: 50px;
     height: 100%;
   }
   /*restaurant.html page*/
