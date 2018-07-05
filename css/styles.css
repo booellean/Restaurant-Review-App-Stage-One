@@ -169,6 +169,7 @@ nav h1 a {
 #restaurant-content{
   display: block;
   width:50%;
+  padding-top: 50px;
 }
 /* ====================== Restaurant Listing ====================== */
 #restaurants-list {
