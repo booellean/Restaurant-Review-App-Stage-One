@@ -105,6 +105,7 @@ nav h1 a {
 #breadcrumb li a {
   color: #0275d8;
   text-decoration: none;
+  display: inline-block;
 }
 
 /* Add a color on mouse-over */
