@@ -324,6 +324,7 @@ img{
 }
 /* ============== Media Queries for Map and Restaurant ============= */
 @media screen and (max-width: 798px){
+  /*both pages*/
   #restaurant-content,
   #map-container{
     position: relative;
@@ -336,6 +337,7 @@ img{
     margin-top: 50px;
     height: 100%;
   }
+  /*restaurant.html page*/
   #breadcrumb{
     width: 100%;
   }
@@ -353,5 +355,25 @@ img{
   }
   #reviews-list>li{
     width: 40%;
+  }
+  /*index.html page*/
+  .select-container{
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    width: 80%;
+  }
+  .select-container select{
+    width: 45%;
+  }
+  .filter-options h2{
+    width: 20%;
+  }
+  #restaurants-list{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+  }
+  #restaurants-list li{
+    width: 37%;
   }
 }
