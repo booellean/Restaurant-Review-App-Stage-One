@@ -388,3 +388,12 @@ img{
     margin: 0 auto;
   }
 }
+@media screen and (max-width: 615px){
+  /*restaurant.html page*/
+  #restaurant-img{
+    width: 100%;
+    float: none;
+  }
+  #reviews-list>li{
+    width: 100%;
+}
