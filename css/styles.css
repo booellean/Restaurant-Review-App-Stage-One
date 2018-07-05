@@ -169,7 +169,6 @@ nav h1 a {
 #restaurant-content{
   display: block;
   width:50%;
-  padding-top: 50px;
 }
 /* ====================== Restaurant Listing ====================== */
 #restaurants-list {
@@ -284,7 +283,7 @@ header {
 #restaurant-container, #reviews-container {
   border-bottom: 1px solid #d9d9d9;
   border-top: 1px solid #fff;
-  padding: 0px 40px 30px;
+  padding: 50px 40px 30px;
 }
 #reviews-container {
   padding: 30px 40px 80px;
