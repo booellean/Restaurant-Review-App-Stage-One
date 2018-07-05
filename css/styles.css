@@ -316,3 +316,8 @@ header {
 #restaurant-hours td {
   color: #666;
 }
+/* ====================== Image Fix ====================== */
+img{
+  object-fit: cover;
+  object-position: center;
+}
