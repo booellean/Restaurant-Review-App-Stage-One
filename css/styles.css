@@ -220,7 +220,7 @@ nav h1 a {
   background-color: orange;
   border-bottom: 3px solid #eee;
   color: #fff;
-  display: inline-block;
+  display: block;
   width: 7rem;
   font-size: 10pt;
   margin: 15px 0 0;
@@ -441,5 +441,8 @@ img{
     width: 100%;
     margin: 0;
     padding: 0;
+  }
+  #restaurants-list li a{
+    width: auto;
   }
 }
