@@ -230,7 +230,7 @@ header {
   position: fixed;
   top: 0;
   width: 100%;
-  z-index: 1000;
+  z-index: 10000;
 }
 .inside #map-container {
   background: blue none repeat scroll 0 0;
@@ -306,18 +306,52 @@ header {
   list-style-type: none;
   margin: 0 0 30px;
   overflow: hidden;
-  padding: 0 20px 20px;
+  padding: 20px;
   position: relative;
   width: 85%;
 }
 #reviews-list li p {
   margin: 0 0 10px;
 }
-#restaurant-hours td {
+
+#restaurant-hours td{
   color: #666;
 }
 /* ====================== Image Fix ====================== */
 img{
   object-fit: cover;
   object-position: center;
+}
+/* ============== Media Queries for Map and Restaurant ============= */
+@media screen and (max-width: 798px){
+  #restaurant-content,
+  #map-container{
+    position: relative;
+    width: 100%;
+  }
+  #map-container{
+    height: 20rem;
+  }
+  #map{
+    margin-top: 50px;
+    height: 100%;
+  }
+  #breadcrumb{
+    width: 100%;
+  }
+  #restaurant-container{
+    padding-top: 20px;
+  }
+  #restaurant-img{
+    width: 50%;
+    float: left;
+  }
+  #reviews-list{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+  }
+  #reviews-list>li{
+    width: 40%;
+  }
 }
