@@ -154,19 +154,19 @@ class DBHelper {
   static imageUrlForRestaurant(restaurant) {
     return (`/img/${restaurant.photograph}${restaurant.ext}`);
   }
-  
+
   static imageSrcsetForRestaurant(restaurant) {
-	return (`/img/${restaurant.photograph}-200${restaurant.ext} 200w,
-			 /img/${restaurant.photograph}-400${restaurant.ext} 400w,
-			 /img/${restaurant.photograph}-600${restaurant.ext} 600w,
-			 /img/${restaurant.photograph}${restaurant.ext}`);
+	return (`/img/${restaurant.photograph}-200${restaurant.ext} 400w,
+			 /img/${restaurant.photograph}-400${restaurant.ext} 600w,
+			 /img/${restaurant.photograph}-600${restaurant.ext} 800w,
+			 /img/${restaurant.photograph}${restaurant.ext} 1000w`);
   }
-  
+
   static imageSizesForRestaurant(restaurant){
-	 return (`(max-width: 320px) 200w,
-	          (max-width: 400px) 400w,
-			  (max-width: 600px) 600w,
-			  800w`);
+	 return (`(max-width: 320px) 400w,
+	          (max-width: 400px) 600w,
+			  (max-width: 600px) 800w,
+			  1000w`);
   }
 
   /**
