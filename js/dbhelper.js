@@ -8,10 +8,10 @@ class DBHelper {
    * Change this to restaurants.json file location on your server.
    */
   static get DATABASE_URL() {
-    // const port = 8000 // Change this to your server port
-    // return `http://localhost:${port}/data/restaurants.json`;
-    const port = 443
-    return `https://booellean.github.io/${port}/data/restaurants.json`;
+    const port = 8000 // Change this to your server port
+    return `http://localhost:${port}/data/restaurants.json`;
+    // const port = 443
+    // return `https://booellean.github.io/${port}/data/restaurants.json`;
   }
 
   /**
@@ -152,7 +152,21 @@ class DBHelper {
    * Restaurant image URL.
    */
   static imageUrlForRestaurant(restaurant) {
-    return (`/img/${restaurant.photograph}`);
+    return (`/img/${restaurant.photograph}${restaurant.ext}`);
+  }
+  
+  static imageSrcsetForRestaurant(restaurant) {
+	return (`/img/${restaurant.photograph}-200${restaurant.ext} 200w,
+			 /img/${restaurant.photograph}-400${restaurant.ext} 400w,
+			 /img/${restaurant.photograph}-600${restaurant.ext} 600w,
+			 /img/${restaurant.photograph}${restaurant.ext}`);
+  }
+  
+  static imageSizesForRestaurant(restaurant){
+	 return (`(max-width: 320px) 200w,
+	          (max-width: 400px) 400w,
+			  (max-width: 600px) 600w,
+			  800w`);
   }
 
   /**
