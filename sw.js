@@ -1,6 +1,16 @@
 const staticCacheName= 'restaurant-review-';
-const staticCacheVer = 'v4';
+const staticCacheVer = 'v1';
 const staticCache = staticCacheName + staticCacheVer; //full version name
+
+//caching code was partly derived from Google Developers, information below
+/**
+*Author: Google (Individual Names Not Listed)
+*Date: April 9th, 2018
+*Title: Caching Files with Service Worker
+*Code Version: Unknown
+*Type: Service Worker
+*Web Addres: https://developers.google.com/web/ilt/pwa/caching-files-with-service-worker
+*/
 
 /**
 * @description Caches site content
