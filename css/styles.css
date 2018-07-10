@@ -63,23 +63,23 @@ footer>a{
   width: 100%;
 }
 /* ====================== Navigation ====================== */
-nav {
+#site-nav {
   width: 100%;
   height: 5rem;
   background-color: #252831;
   text-align:center;
 }
-nav h1 {
+#site-nav h1 {
   margin: auto;
 }
-nav h1 a {
+#site-nav h1 a {
   color: #fff;
   font-size: 14pt;
   font-weight: 200;
   letter-spacing: 10px;
   text-transform: uppercase;
 }
-#breadcrumb {
+#breadcrumb ul {
   padding: 10px 40px 16px;
   list-style: none;
   background-color: #eee;
@@ -89,26 +89,26 @@ nav h1 a {
 }
 
 /* Display list items side by side */
-#breadcrumb li {
+#breadcrumb ul li {
   display: inline;
 }
 
 /* Add a slash symbol (/) before/behind each list item */
-#breadcrumb li+li:before {
+#breadcrumb ul li+li:before {
   padding: 8px;
   color: black;
   content: "/\00a0";
 }
 
 /* Add a color to all links inside the list */
-#breadcrumb li a {
+#breadcrumb ul li a {
   color: #0275d8;
   text-decoration: none;
   display: inline-block;
 }
 
 /* Add a color on mouse-over */
-#breadcrumb li a:hover {
+#breadcrumb ul li a:hover {
   color: #01447e;
   text-decoration: underline;
 }
@@ -341,7 +341,7 @@ img{
     height: 100%;
   }
   /*restaurant.html page*/
-  #breadcrumb{
+  #breadcrumb ul{
     width: 100%;
   }
   #restaurant-container{
@@ -428,7 +428,7 @@ img{
 }
 @media screen and (max-width: 323px){
   /*restaurant.html page*/
-  #breadcrumb{
+  #breadcrumb ul{
     padding: 10px 15px 16px;
   }
   #restaurant-container{
