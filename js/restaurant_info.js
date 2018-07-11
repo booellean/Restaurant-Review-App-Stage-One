@@ -65,6 +65,12 @@ fetchRestaurantFromURL = (callback) => {
  * Create restaurant HTML and add it to the webpage
  */
 fillRestaurantHTML = (restaurant = self.restaurant) => {
+  const restaurantContainer = document.getElementById('restaurant-container');
+  const divDescript = document.createElement('div');//To allow proper tabbing, otherwise list gets stuck
+  divDescript.setAttribute('aria-label', `${restaurant.name} details section. Please Use Arrow Keys to View Items.`);
+  divDescript.className = 'list-item-describor focus-item';
+  restaurantContainer.prepend(divDescript);
+
   const name = document.getElementById('restaurant-name');
   name.innerHTML = restaurant.name;
   name.className = 'focus-item';
@@ -119,6 +125,11 @@ fillRestaurantHoursHTML = (operatingHours = self.restaurant.operating_hours) => 
  */
 fillReviewsHTML = (reviews = self.restaurant.reviews) => {
   const container = document.getElementById('reviews-container');
+  const divDescript = document.createElement('div');//To allow proper tabbing, otherwise list gets stuck
+  divDescript.setAttribute('aria-label', `Review Information. Please tab over and use arrow keys to cycle through content`);
+  divDescript.className = 'list-item-describor focus-item';
+  container.prepend(divDescript);
+
   const title = document.createElement('h3');
   title.innerHTML = 'Reviews';
   title.className = 'focus-item';
