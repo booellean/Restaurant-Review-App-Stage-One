@@ -326,6 +326,20 @@ img{
   object-fit: cover;
   object-position: center;
 }
+/* ======================= Focus Assistants ======================== */
+.list-item-describor{
+  position: absolute;
+  overflow: hidden;
+  height: 0;
+  width: 0;
+}
+.skip-link{
+  position: absolute;
+  height: 0;
+  width: 0;
+  right:-1em;
+  top: -1em;
+}
 /* ============== Media Queries for Map and Restaurant ============= */
 @media screen and (max-width: 798px){
   /*both pages*/
