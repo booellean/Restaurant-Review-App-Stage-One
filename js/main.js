@@ -150,7 +150,7 @@ createRestaurantHTML = (restaurant) => {
   li.setAttribute('id', newId); //used to create nodes for focus_helper
   li.setAttribute('tabindex', '-1');
 
-  const divDescript = document.createElement('div');
+  const divDescript = document.createElement('div');//To allow proper tabbing, otherwise list gets stuck
   divDescript.setAttribute('aria-label', `${restaurant.name} restaurant. Please Use Arrow Keys to View Items.`);
   divDescript.className = 'list-item-describor focus-item';
   li.append(divDescript);
