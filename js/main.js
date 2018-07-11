@@ -189,6 +189,15 @@ createRestaurantHTML = (restaurant) => {
  * Inits focus groups for functionality
  */
 addMarkersToMap = (restaurants = self.restaurants) => {
+  const mapBox = document.getElementById('map');
+  const skiplink = document.createElement('a');
+  skiplink.className = 'skip-link';
+  skiplink.href = '#restaurants-list';
+  skiplink.setAttribute('aria-label', 'Skip link: skip Mapbox map and jump to restaurant content.');
+  skiplink.setAttribute('tabindex', '0');
+
+  mapBox.prepend(skiplink);
+
   restaurants.forEach(restaurant => {
     // Add marker to the map
     const marker = DBHelper.mapMarkerForRestaurant(restaurant, self.newMap);
