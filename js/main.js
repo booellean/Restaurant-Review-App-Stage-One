@@ -148,8 +148,12 @@ createRestaurantHTML = (restaurant) => {
   const li = document.createElement('li');
   const newId = (restaurant.name).replace(/[^A-Za-z0-9]/g, '');
   li.setAttribute('id', newId); //used to create nodes for focus_helper
-  li.setAttribute('aria-label', `${restaurant.name} restaurant. Please Use Arrow Keys to View Items.`);
-  li.setAttribute('tabindex', '0');
+  li.setAttribute('tabindex', '-1');
+
+  const divDescript = document.createElement('div');
+  divDescript.setAttribute('aria-label', `${restaurant.name} restaurant. Please Use Arrow Keys to View Items.`);
+  divDescript.className = 'list-item-describor focus-item';
+  li.append(divDescript);
 
   const image = document.createElement('img');
   image.className = 'focus-item restaurant-img';
