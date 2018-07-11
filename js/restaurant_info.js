@@ -32,6 +32,16 @@ initMap = () => {
       fillBreadcrumb();
       DBHelper.mapMarkerForRestaurant(self.restaurant, self.newMap);
       restaurantObjects(); //creates focus objects for document
+
+      const mapBox = document.getElementById('map');
+      const skiplink = document.createElement('a');
+      skiplink.className = 'skip-link';
+      skiplink.href = '#restaurant-container';
+      skiplink.setAttribute('aria-label', 'Skip link: skip Mapbox map and jump to restaurant content.');
+      skiplink.setAttribute('tabindex', '0');
+
+      mapBox.prepend(skiplink);
+
     }
   });
 }
